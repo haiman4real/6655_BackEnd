@@ -1,8 +1,10 @@
 const http = require("http");
 const path = require("path");
 const fs = require("fs");
+const cors = require("cors")
 
 const server = http.createServer((req, res) => {
+    // res.header("Access-Control-Allow-Origin", "*");
     
     /*
 
@@ -99,6 +101,7 @@ const server = http.createServer((req, res) => {
                                     
                                     if (err) throw err;
                                     // Please note the content-type here is application/json
+                                    res.setHeader("Access-Control-Allow-Origin", "*");
                                     res.writeHead(200, { 'Content-Type': 'application/json' });
                                     res.end(content);
                         }
