@@ -1,0 +1,14 @@
+{
+  "name": "finalproject",
+  "version": "1.0.0",
+  "description": "final project 6655",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index"
+  },
+  "author": "emmanuel ogunwobi",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

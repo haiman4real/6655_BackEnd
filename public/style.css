@@ -1,0 +1,362 @@
+:root{
+    --main-radius:5px;
+    --main-padding:5px;
+    --navBg:  #0B132B;
+    --aboutBg:  #0B132B;
+    --experienceBg: #34506B;
+    --portfolioBg:  #1C2541;
+    --footerBg:  #0B132B;
+    --blue: #1e90ff;
+    --white: #fff;
+    --yellowish: #f7c600;
+}
+
+.container{
+    margin-left: 200px;
+    margin-right: 200px;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-size: 1em;
+    color: var(--white);
+    display: grid;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 0.8fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header header header"
+    "main main main main"
+    "about about about about"
+    "experience experience education education"
+    "experience experience achievements achievements"
+    "portfolio portfolio portfolio portfolio"
+    "blog blog blog blog"
+    "footer footer footer footer"
+    ;
+    gap: 0.5em;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header {
+    padding: 0 20px;
+    background-color: var(--navBg);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    grid-area: header;
+}
+
+#logo {
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    grid-area: logo;
+}
+
+#logo a {
+    color: var(--white);
+}
+
+nav{
+    grid-area: nav;
+}
+
+nav ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+
+}
+
+nav ul a {
+    color: var(--white);
+}
+
+nav ul li {
+    padding: 5px;
+    margin-left: 10px;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
+
+
+#mobileIcon {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+#mobileIcon div {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+#mobileIcon ul{
+    list-style: none;
+}
+
+#mobileIcon ul li:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu {
+    background-color: var(--navBg);
+    text-transform: uppercase;
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: auto;
+    /* height: calc(100vh - 50px); */
+    width: 100%;
+}
+
+.mobile-menu ul {
+    list-style: none;
+}
+.mobile-menu a {
+    color: var(--white);
+}
+
+.mobile-menu li {
+    padding: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+main{
+    background-color: #fff;
+    padding: var(--main-padding);
+    grid-area: main;
+
+}
+#info{
+    color: #0B132B;
+    display: inline;
+    float: left;
+    margin-top: 10em;
+    margin-left: 35px;
+}
+
+#info h1{
+    font-size: 40px;
+}
+
+#info p{
+    margin-top: -30px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+#info span{
+    margin-bottom: -70px;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+#infoImage{
+    margin-left: 80px;
+    justify-content: center;
+}
+
+#infoImage img{
+    float: right;
+    text-align:right;
+}
+
+#about{
+    background-color: var(--aboutBg);
+    padding: var(--main-padding);
+    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    line-height: 25px;
+    grid-area: about;
+}
+
+#experience{
+    background: var(--experienceBg);
+    border-radius: var(--main-radius);
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    grid-area: experience;
+}
+
+#education{
+    background: var(--experienceBg);
+    border-radius: var(--main-radius);
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    grid-area: education;
+}
+
+#achievements{
+    background: var(--experienceBg);
+    border-radius: var(--main-radius);
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    grid-area: achievements;
+}
+
+#portfolio{
+    background: var(--portfolioBg);
+    border-radius: var(--main-radius);
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+    grid-area: portfolio;
+}
+
+#portfolio img{
+   height: 250px;
+}
+
+#blog{
+    background: #fff;
+    border-radius: var(--main-radius);
+    color: #0B132B;
+    text-align: center;
+    grid-area: blog;
+}
+
+.blogContent{
+    height: 280px;
+    padding: 10px;
+    /* float: left; */
+    margin: 2px;
+    display: inline-grid;
+}
+
+.blogContent h2{
+    margin-bottom: -20px;
+}
+
+.blogContent h5{
+    margin-bottom: -10px;
+}
+
+.blogContent img{
+    justify-content: center;
+}
+
+footer{
+    background-color: var(--footerBg);
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    text-align: center;
+    grid-area: footer;
+}
+
+#footerName{
+    font-size: 25px;
+}
+
+#footerTag{
+    margin-top: -30px;
+    font-size: 15px;
+    font-style: italic;
+}
+
+@media only screen and (max-width:650px) {
+    .container{
+        margin: 0px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        "about"
+        "experience"
+        "education"
+        "achievements"
+        "portfolio"
+        "blog"
+        "footer"
+        ;
+        gap: 0.2rem;
+    }
+
+
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #info{
+        margin-top: -80px;
+        margin-left: 0;
+        float: none;
+        text-align: center;
+        
+    }
+    #info span{
+        display: none;
+    }
+
+    #info ul{
+        text-align: center;
+        list-style: none;
+    }
+
+    #infoImage img{
+        float: none;
+        display: block;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    #mobileIcon {
+        display: block;
+    }
+}
+
